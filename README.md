@@ -43,4 +43,7 @@ O site é totalmente responsivo e se adapta a diferentes tamanhos de tela, inclu
 
 ## 📄 Licença
 
-Projeto desenvolvido para fins educacionais. © 2025 + Compras Mini Mercado.
+Acesse o link do projeto: [+ Compras Mini Mercado](https://jairsisconeto.github.io/CalculadoraCO2)
+
+Projeto desenvolvido para fins educacionais. © 2026 + Compras Mini Mercado.
+
