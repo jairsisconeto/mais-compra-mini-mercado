@@ -1,0 +1,709 @@
+/* ============================================
+   + Compras Mini Mercado - Estilos Originais
+   ============================================ */
+
+:root {
+    --verde-principal: #2D6A4F;
+    --verde-claro: #40916C;
+    --verde-escuro: #1B4332;
+    --creme: #F8F4E9;
+    --marrom-claro: #D4A574;
+    --marrom: #8B5A2B;
+    --branco: #FFFFFF;
+    --cinza-texto: #2D2D2D;
+    --cinza-claro: #6B6B6B;
+    --sombra: rgba(45, 106, 79, 0.15);
+    --sombra-forte: rgba(45, 106, 79, 0.25);
+    --transicao: 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--creme);
+    color: var(--cinza-texto);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+}
+
+/* ========== HEADER ========== */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--branco);
+    box-shadow: 0 2px 20px var(--sombra);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: var(--verde-principal);
+    transition: var(--transicao);
+}
+
+.logo:hover {
+    transform: scale(1.02);
+}
+
+.logo-svg {
+    width: 48px;
+    height: 48px;
+}
+
+.logo-text {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--verde-principal);
+}
+
+.nav-tabs {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.tab-btn {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    background: transparent;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--cinza-texto);
+    cursor: pointer;
+    border-radius: 8px;
+    transition: var(--transicao);
+}
+
+.tab-btn:hover {
+    background: var(--creme);
+    color: var(--verde-principal);
+}
+
+.tab-btn.active {
+    background: var(--verde-principal);
+    color: var(--branco);
+}
+
+.menu-mobile {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-mobile span {
+    width: 24px;
+    height: 3px;
+    background: var(--verde-principal);
+    border-radius: 2px;
+}
+
+/* ========== MAIN CONTENT ========== */
+.main-content {
+    min-height: calc(100vh - 180px);
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.4s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* ========== ABA EMPRESA ========== */
+.hero-empresa {
+    position: relative;
+    height: 350px;
+    background: linear-gradient(135deg, var(--verde-escuro) 0%, var(--verde-principal) 50%, var(--verde-claro) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-empresa::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.5;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.1) 0%, transparent 50%);
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: var(--branco);
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    opacity: 0.95;
+}
+
+.empresa-section {
+    margin-bottom: 3rem;
+}
+
+.empresa-section h2 {
+    color: var(--verde-principal);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid var(--marrom-claro);
+    display: inline-block;
+}
+
+.empresa-section p {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    color: var(--cinza-texto);
+}
+
+.valores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.valor-card {
+    background: var(--branco);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px var(--sombra);
+    transition: var(--transicao);
+    border: 2px solid transparent;
+}
+
+.valor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--sombra-forte);
+    border-color: var(--verde-claro);
+}
+
+.valor-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.valor-card h3 {
+    color: var(--verde-principal);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.valor-card p {
+    font-size: 0.95rem;
+    margin: 0;
+    color: var(--cinza-claro);
+}
+
+.destaque-comunidade {
+    background: linear-gradient(135deg, rgba(45, 106, 79, 0.08) 0%, rgba(64, 145, 108, 0.08) 100%);
+    padding: 2rem;
+    border-radius: 16px;
+    border-left: 5px solid var(--verde-principal);
+}
+
+/* ========== ABA PRODUTOS ========== */
+.produtos-header {
+    background: linear-gradient(135deg, var(--verde-principal), var(--verde-claro));
+    color: var(--branco);
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.produtos-header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.produtos-header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.linha-produtos {
+    margin-bottom: 3rem;
+}
+
+.linha-titulo {
+    font-size: 1.6rem;
+    color: var(--verde-principal);
+    margin-bottom: 1.5rem;
+    padding-left: 0.5rem;
+    border-left: 4px solid var(--marrom-claro);
+}
+
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.produto-card {
+    background: var(--branco);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px var(--sombra);
+    transition: var(--transicao);
+}
+
+.produto-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px var(--sombra-forte);
+}
+
+.produto-img {
+    height: 200px;
+    overflow: hidden;
+    background: var(--creme);
+}
+
+.produto-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transicao);
+}
+
+.produto-card:hover .produto-img img {
+    transform: scale(1.08);
+}
+
+.produto-card h3 {
+    padding: 1rem 1rem 0.25rem;
+    color: var(--verde-principal);
+    font-size: 1.2rem;
+}
+
+.produto-card p {
+    padding: 0 1rem 1rem;
+    font-size: 0.95rem;
+    color: var(--cinza-claro);
+}
+
+/* ========== ABA CONTATO ========== */
+.contato-header {
+    background: linear-gradient(135deg, var(--verde-escuro), var(--verde-principal));
+    color: var(--branco);
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.contato-header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.contato-header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.contato-container {
+    margin-top: -2rem;
+}
+
+.contato-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.form-contato {
+    background: var(--branco);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px var(--sombra);
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    color: var(--cinza-texto);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    transition: var(--transicao);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--verde-principal);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 1rem;
+    background: var(--verde-principal);
+    color: var(--branco);
+    border: none;
+    border-radius: 8px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transicao);
+}
+
+.btn-enviar:hover {
+    background: var(--verde-escuro);
+    transform: translateY(-2px);
+}
+
+.redes-contato {
+    background: var(--branco);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px var(--sombra);
+}
+
+.redes-contato h3 {
+    color: var(--verde-principal);
+    margin-bottom: 0.5rem;
+}
+
+.redes-contato > p {
+    margin-bottom: 1.5rem;
+    color: var(--cinza-claro);
+}
+
+.redes-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.rede-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: var(--creme);
+    border-radius: 8px;
+    color: var(--verde-principal);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transicao);
+}
+
+.rede-link:hover {
+    background: var(--verde-principal);
+    color: var(--branco);
+    transform: translateX(5px);
+}
+
+.rede-link svg {
+    width: 24px;
+    height: 24px;
+}
+
+.info-contato p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--cinza-texto);
+}
+
+/* ========== ABA FAQ ========== */
+.faq-header {
+    background: linear-gradient(135deg, var(--verde-claro), var(--verde-principal));
+    color: var(--branco);
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.faq-header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.faq-header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.faq-container {
+    margin-top: -2rem;
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--branco);
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px var(--sombra);
+}
+
+.faq-pergunta {
+    width: 100%;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: none;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--cinza-texto);
+    cursor: pointer;
+    text-align: left;
+    transition: var(--transicao);
+}
+
+.faq-pergunta:hover {
+    background: var(--creme);
+}
+
+.faq-icon {
+    font-size: 1.5rem;
+    color: var(--verde-principal);
+    transition: var(--transicao);
+}
+
+.faq-item.ativo .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-resposta {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-item.ativo .faq-resposta {
+    max-height: 300px;
+}
+
+.faq-resposta p {
+    padding: 0 1.5rem 1.25rem;
+    color: var(--cinza-claro);
+    line-height: 1.7;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+    background: var(--verde-escuro);
+    color: var(--branco);
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-logo .logo-text {
+    color: var(--branco);
+    font-size: 1.3rem;
+}
+
+.footer-logo p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-links a {
+    color: var(--branco);
+    text-decoration: none;
+    transition: var(--transicao);
+}
+
+.footer-links a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.footer-copy {
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* ========== TOAST ========== */
+.toast {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 1rem 1.5rem;
+    background: var(--verde-principal);
+    color: var(--branco);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px var(--sombra-forte);
+    transform: translateY(150%);
+    transition: transform 0.3s ease;
+    z-index: 2000;
+}
+
+.toast.visivel {
+    transform: translateY(0);
+}
+
+/* ========== RESPONSIVO ========== */
+@media (max-width: 900px) {
+    .contato-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-tabs {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--branco);
+        flex-direction: column;
+        padding: 1rem;
+        box-shadow: 0 4px 20px var(--sombra);
+    }
+
+    .nav-tabs.ativo {
+        display: flex;
+    }
+
+    .menu-mobile {
+        display: flex;
+    }
+
+    .hero-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    .produtos-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-container {
+        padding: 1rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .logo-text {
+        font-size: 1.2rem;
+    }
+
+    .produtos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .valores-grid {
+        grid-template-columns: 1fr;
+    }
+}

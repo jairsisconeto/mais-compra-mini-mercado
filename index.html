@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>+ Compras | Mini Mercado - Sua conveniência no bairro</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo" onclick="abrirAba('empresa')">
+                <svg class="logo-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#2D6A4F"/>
+                            <stop offset="100%" style="stop-color:#40916C"/>
+                        </linearGradient>
+                    </defs>
+                    <rect width="120" height="120" rx="24" fill="url(#logoGrad)"/>
+                    <text x="60" y="72" font-family="Arial Black, sans-serif" font-size="56" font-weight="900" fill="white" text-anchor="middle">+</text>
+                    <rect x="52" y="82" width="16" height="20" rx="2" fill="white"/>
+                </svg>
+                <span class="logo-text">+ Compras</span>
+            </a>
+            <nav class="nav-tabs">
+                <button class="tab-btn active" data-tab="empresa">Empresa</button>
+                <button class="tab-btn" data-tab="produtos">Produtos</button>
+                <button class="tab-btn" data-tab="contato">Contato</button>
+                <button class="tab-btn" data-tab="faq">FAQ</button>
+            </nav>
+            <button class="menu-mobile" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- ABA EMPRESA -->
+        <section id="empresa" class="tab-content active">
+            <div class="hero-empresa">
+                <div class="hero-overlay"></div>
+                <div class="hero-text">
+                    <h1>+ Compras Mini Mercado</h1>
+                    <p>Sua conveniência e qualidade no coração do bairro</p>
+                </div>
+            </div>
+            <div class="container">
+                <article class="empresa-section">
+                    <h2>Nossa História</h2>
+                    <p>O + Compras nasceu do sonho de oferecer ao nosso bairro um espaço acolhedor onde qualidade, variedade e preço justo caminham juntos. Fundado em 2010, começamos como um pequeno empório e, com muito trabalho e dedicação, crescemos para nos tornarmos referência em conveniência na região.</p>
+                    <p>Hoje, atendemos centenas de famílias diariamente, mantendo o compromisso de sempre estar perto quando você precisa, seja para o café da manhã, o almoço ou aquela comprinha de última hora.</p>
+                </article>
+                <article class="empresa-section">
+                    <h2>Missão</h2>
+                    <p>Oferecer produtos de qualidade com preços acessíveis, proporcionando uma experiência de compra prática e agradável, fortalecendo os laços com nossa comunidade e sendo o mini mercado de confiança das famílias.</p>
+                </article>
+                <article class="empresa-section">
+                    <h2>Valores</h2>
+                    <div class="valores-grid">
+                        <div class="valor-card">
+                            <span class="valor-icon">🤝</span>
+                            <h3>Proximidade</h3>
+                            <p>Estar perto dos nossos clientes, conhecendo suas necessidades</p>
+                        </div>
+                        <div class="valor-card">
+                            <span class="valor-icon">✨</span>
+                            <h3>Qualidade</h3>
+                            <p>Selecionar os melhores produtos para sua mesa</p>
+                        </div>
+                        <div class="valor-card">
+                            <span class="valor-icon">💚</span>
+                            <h3>Compromisso</h3>
+                            <p>Honestidade e transparência em todas as relações</p>
+                        </div>
+                        <div class="valor-card">
+                            <span class="valor-icon">🏘️</span>
+                            <h3>Comunidade</h3>
+                            <p>Fortalecer o desenvolvimento local e as relações do bairro</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="empresa-section destaque-comunidade">
+                    <h2>Nosso Papel na Comunidade</h2>
+                    <p>O + Compras vai além de um ponto de venda. Somos parte do dia a dia do bairro: conhecemos nossos clientes pelo nome, participamos de eventos locais e nos orgulhamos de ser um espaço onde as pessoas se encontram. Acreditamos que um mini mercado de qualidade contribui para a qualidade de vida de toda a comunidade, oferecendo praticidade sem abrir mão do atendimento humanizado.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ABA PRODUTOS -->
+        <section id="produtos" class="tab-content">
+            <div class="produtos-header">
+                <h1>Nossos Produtos</h1>
+                <p>Qualidade e variedade para sua casa</p>
+            </div>
+            <div class="container">
+                <div class="linha-produtos">
+                    <h2 class="linha-titulo">🛒 Mercearia</h2>
+                    <div class="produtos-grid">
+                        <div class="produto-card">
+                            <div class="produto-img">
+                                <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400&h=300&fit=crop" alt="Arroz">
+                            </div>
+                            <h3>Arroz</h3>
+                            <p>Arroz branco tipo 1, grãos soltos e saborosos. Pacote 5kg.</p>
+                        </div>
+                        <div class="produto-card">
+                            <div class="produto-img">
+                                <img src="https://images.unsplash.com/photo-1596560548464-f010549b84d7?w=400&h=300&fit=crop" alt="Feijão">
+                            </div>
+                            <h3>Feijão</h3>
+                            <p>Feijão carioca de primeira qualidade. Pacote 1kg.</p>
+                        </div>
+                        <div class="produto-card">
+                            <div class="produto-img">
+                                <img src="https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=400&h=300&fit=crop" alt="Açúcar">
+                            </div>
+                            <h3>Açúcar</h3>
+                            <p>Açúcar cristal refinado. Pacote 1kg.</p>
+                        </div>
+                        <div class="produto-card">
+                            <div class="produto-img">
+                                <img src="https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=400&h=300&fit=crop" alt="Óleo">
+                            </div>
+                            <h3>Óleo</h3>
+                            <p>Óleo de soja refinado. Garrafa 900ml.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="linha-produtos">
+                    <h2 class="linha-titulo">🥤 Bebidas</h2>
+                    <div class="produtos-grid">
+                        <div class="produto-card">
+                            <div class="produto-img">
+                                <img src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?w=400&h=300&fit=crop" alt="Água Mineral">
+                            </div>
+                            <h3>Água Mineral</h3>
+                            <p>Água mineral sem gás. Garrafa 1,5L.</p>
+                        </div>
+                        <div class="produto-card">
+                            <div class="produto-img">
+                                <img src="https://images.unsplash.com/photo-1629203851122-3726ecdf080e?w=400&h=300&fit=crop" alt="Refrigerante">
+                            </div>
+                            <h3>Refrigerante</h3>
+                            <p>Refrigerante cola. Garrafa 2L.</p>
+                        </div>
+                        <div class="produto-card">
+                            <div class="produto-img">
+                                <img src="https://images.unsplash.com/photo-1621506283937-3bb95e7b2198?w=400&h=300&fit=crop" alt="Suco">
+                            </div>
+                            <h3>Suco</h3>
+                            <p>Suco de laranja integral. Caixa 1L.</p>
+                        </div>
+                        <div class="produto-card">
+                            <div class="produto-img">
+                                <img src="https://images.unsplash.com/photo-1535958636474-b021ee887b13?w=400&h=300&fit=crop" alt="Cerveja">
+                            </div>
+                            <h3>Cerveja</h3>
+                            <p>Cerveja pilsen gelada. Lata 350ml.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="linha-produtos">
+                    <h2 class="linha-titulo">🧼 Higiene e Limpeza</h2>
+                    <div class="produtos-grid">
+                        <div class="produto-card">
+                            <div class="produto-img">
+                                <img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=400&h=300&fit=crop" alt="Sabão em Pó">
+                            </div>
+                            <h3>Sabão em Pó</h3>
+                            <p>Sabão em pó para roupas. Pacote 1kg.</p>
+                        </div>
+                        <div class="produto-card">
+                            <div class="produto-img">
+                                <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?w=400&h=300&fit=crop" alt="Detergente">
+                            </div>
+                            <h3>Detergente</h3>
+                            <p>Detergente líquido para louças. Frasco 500ml.</p>
+                        </div>
+                        <div class="produto-card">
+                            <div class="produto-img">
+                                <img src="https://images.unsplash.com/photo-1584556812950-64a1a7e8e0e2?w=400&h=300&fit=crop" alt="Papel Higiênico">
+                            </div>
+                            <h3>Papel Higiênico</h3>
+                            <p>Papel higiênico folha dupla. Pacote 12 rolos.</p>
+                        </div>
+                        <div class="produto-card">
+                            <div class="produto-img">
+                                <img src="https://images.unsplash.com/photo-1585421514738-01798e348b19?w=400&h=300&fit=crop" alt="Desinfetante">
+                            </div>
+                            <h3>Desinfetante</h3>
+                            <p>Desinfetante para pisos e superfícies. Garrafa 1L.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABA CONTATO -->
+        <section id="contato" class="tab-content">
+            <div class="contato-header">
+                <h1>Fale Conosco</h1>
+                <p>Estamos à disposição para dúvidas, sugestões ou pedidos</p>
+            </div>
+            <div class="container contato-container">
+                <div class="contato-grid">
+                    <form class="form-contato" id="formContato">
+                        <div class="form-group">
+                            <label for="nome">Nome completo</label>
+                            <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000">
+                        </div>
+                        <div class="form-group">
+                            <label for="assunto">Assunto</label>
+                            <select id="assunto" name="assunto" required>
+                                <option value="">Selecione...</option>
+                                <option value="duvida">Dúvida</option>
+                                <option value="sugestao">Sugestão</option>
+                                <option value="pedido">Pedido</option>
+                                <option value="reclamacao">Reclamação</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Escreva sua mensagem..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+                    </form>
+                    <div class="redes-contato">
+                        <h3>Redes Sociais</h3>
+                        <p>Siga-nos e acompanhe nossas promoções!</p>
+                        <div class="redes-links">
+                            <a href="#" class="rede-link" aria-label="WhatsApp">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                                WhatsApp
+                            </a>
+                            <a href="#" class="rede-link" aria-label="Instagram">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                Instagram
+                            </a>
+                            <a href="#" class="rede-link" aria-label="Facebook">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                                Facebook
+                            </a>
+                        </div>
+                        <div class="info-contato">
+                            <p><strong>Endereço:</strong> Avenida Brasil, 001 - Centro</p>
+                            <p><strong>Telefone:</strong> (11) 91111-1111</p>
+                            <p><strong>E-mail:</strong> contato@maiscompras.com.br</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABA FAQ -->
+        <section id="faq" class="tab-content">
+            <div class="faq-header">
+                <h1>Perguntas Frequentes</h1>
+                <p>Tire suas dúvidas sobre o + Compras</p>
+            </div>
+            <div class="container faq-container">
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-pergunta">
+                            <span>Quais são os horários de funcionamento?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-resposta">
+                            <p>Funcionamos de segunda a sábado, das 7h às 22h, e aos domingos e feriados, das 8h às 20h. Em datas especiais, nosso horário pode sofrer alterações – acompanhe nossas redes sociais para ficar por dentro!</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-pergunta">
+                            <span>Quais formas de pagamento são aceitas?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-resposta">
+                            <p>Aceitamos dinheiro, cartões de débito e crédito (todas as bandeiras), PIX e vale-alimentação. Para compras acima de R$ 100, parcelamos em até 3x sem juros no cartão de crédito.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-pergunta">
+                            <span>Qual é a política de trocas?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-resposta">
+                            <p>Produtos em perfeitas condições podem ser trocados em até 7 dias, mediante apresentação da nota fiscal. Produtos de higiene e limpeza lacrados podem ser trocados em caso de defeito. Alimentos perecíveis não são trocados após abertura.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-pergunta">
+                            <span>Vocês fazem entregas?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-resposta">
+                            <p>Sim! Fazemos entregas na região do bairro. O valor mínimo para entrega é R$ 30 e a taxa varia conforme a distância. Entre em contato pelo WhatsApp para fazer seu pedido!</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-pergunta">
+                            <span>Como posso sugerir novos produtos?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-resposta">
+                            <p>Adoramos sugestões! Use nosso formulário de contato na aba "Contato" ou envie uma mensagem pelas redes sociais. Analisamos todas as sugestões e buscamos atender o que for possível.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">+ Compras</span>
+                    <p>Mini Mercado - Sua conveniência no bairro</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#" onclick="abrirAba('empresa')">Empresa</a>
+                    <a href="#" onclick="abrirAba('produtos')">Produtos</a>
+                    <a href="#" onclick="abrirAba('contato')">Contato</a>
+                    <a href="#" onclick="abrirAba('faq')">FAQ</a>
+                </div>
+            </div>
+            <p class="footer-copy">&copy; 2026 + Compras Mini Mercado. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
